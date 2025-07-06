@@ -9,9 +9,6 @@
         }; \
         uint16_t name; \
     }
-#define ENDIAN_STRUCT_MEMBERS(low, high) \
-    low; \
-    high
 #else
 #define LOW_HIGH_UNION(name, low, high) \
     union { \
@@ -21,7 +18,4 @@
         }; \
         uint16_t name; \
     }
-#define ENDIAN_STRUCT_MEMBERS(low, high) \
-    high; \
-    low
 #endif
